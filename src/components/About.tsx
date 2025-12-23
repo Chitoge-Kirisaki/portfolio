@@ -2,6 +2,18 @@ export default function About() {
     return (
         <div className="max-w-3xl space-y-6 text-white/70 leading-relaxed">
             <p>
+
+
+
+                <blockquote className="mb-10 border-l-2 border-teal-300/40 pl-6 italic text-white/60">
+                    “The best way to predict the future is to invent it.”
+                    <span className="block mt-2 text-sm not-italic text-white/40">
+                        — Alan Kay
+                    </span>
+                </blockquote>
+
+
+
                 I’m drawn to problems that don’t come with clear instructions, where user
                 needs, technical constraints, and business goals pull in different
                 directions. In those spaces, I focus on understanding what actually

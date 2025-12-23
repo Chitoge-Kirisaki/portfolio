@@ -5,7 +5,7 @@ export default function Contact() {
         <div className="mt-2 grid grid-cols-1 gap-4 md:grid-cols-3">
             {/* EMAIL */}
             <a
-                href="mailto:ksb2895@utexas.edu"
+                href="mailto:ksb2895@utexas.edu?subject=Portfolio%20Inquiry"
                 className="group rounded-2xl border border-white/10 bg-white/[0.02] p-5 transition hover:border-teal-300/40 hover:bg-white/[0.04]"
             >
                 <div className="flex items-center justify-between">
