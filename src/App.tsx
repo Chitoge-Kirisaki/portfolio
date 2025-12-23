@@ -1,4 +1,3 @@
-import React from "react";
 import Nav from "./components/Nav";
 import BrushCursor from "./components/BrushCursor";
 import Hero from "./components/Hero";
