@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function About() {
     return (
         <div className="max-w-3xl space-y-6 text-white/70 leading-relaxed">

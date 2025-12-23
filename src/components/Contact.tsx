@@ -1,4 +1,3 @@
-import React from "react";
 import { Mail, Github, Linkedin, ArrowUpRight } from "lucide-react";
 
 export default function Contact() {
