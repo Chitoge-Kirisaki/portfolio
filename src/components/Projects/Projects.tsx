@@ -149,8 +149,8 @@ export default function Projects() {
                     "Model Evaluation",
                 ],
                 artifacts: [
-                    { label: "View GitHub Repository →", href: "#" },
-                    { label: "View Sample Outputs →", href: "#" },
+                    { label: "View GitHub Repository →", href: "https://github.com/Kunal1337/Moving-Averages-Stock-Trading" },
+                    { label: "View Sample Outputs →", href: "https://drive.google.com/drive/folders/1QNcIVXfUNcKP4B67HFMrhsr9whHA7Y9a?usp=sharing" },
                 ],
             },
         ],
