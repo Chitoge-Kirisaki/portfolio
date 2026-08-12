@@ -63,7 +63,7 @@ export default function Projects() {
                     "Prioritized high-impact categories instead of trying to cover every edge case",
                 ],
                 solution:
-                    "Proposed a centralized, dynamic onboarding handbook embedded into the team’s workflow—focused on the highest-impact ticket categories, optimized for clarity, and designed to stay current as systems and processes evolve.",
+                    "Proposed a centralized, dynamic onboarding handbook embedded into the team’s workflow, focused on the highest-impact ticket categories, optimized for clarity, and designed to stay current as systems and processes evolve.",
                 outcome:
                     "Aligned stakeholders around a more scalable onboarding strategy. Leadership adopted the recommendations as a reference point for future onboarding improvements and training updates.",
                 skills: [
@@ -87,11 +87,11 @@ export default function Projects() {
                     "Built an end-to-end transactional system to understand product + technical tradeoffs.",
                 contextLine: "Personal Project · End-to-End Owner · Production-style flows",
                 context:
-                    "I wanted to understand how real products work beyond isolated features—how user flows, persistence, and admin controls interact in one system. I designed a functional e-commerce platform that mirrors real-world complexity: accounts, inventory, and order tracking.",
+                    "I wanted to understand how real products work beyond isolated features: how user flows, persistence, and admin controls interact in one system. I designed a functional e-commerce platform that mirrors real-world complexity: accounts, inventory, and order tracking.",
                 role:
                     "I independently scoped, designed, and built the platform end-to-end, owning product decisions, system architecture, and full-stack implementation.",
                 problemFraming:
-                    "The goal wasn’t maximum polish or feature count. It was learning the tradeoffs behind a realistic transactional system—how users/admins interact with the data model, and how constraints shape product decisions.",
+                    "The goal wasn’t maximum polish or feature count. It was learning the tradeoffs behind a realistic transactional system: how users/admins interact with the data model, and how constraints shape product decisions.",
                 approach: [
                     "Defined core user + admin flows (browse, checkout, order history, inventory management)",
                     "Designed a relational schema for products, users, orders, and admin actions",
@@ -100,7 +100,7 @@ export default function Projects() {
                     "Iterated to handle edge cases and ensure consistency across workflows",
                 ],
                 solution:
-                    "Delivered a working platform where users browse products, complete mock purchases, and view order history, while admins securely manage inventory and product data—structured around production-style workflows.",
+                    "Delivered a working platform where users browse products, complete mock purchases, and view order history, while admins securely manage inventory and product data, structured around production-style workflows.",
                 outcome:
                     "Strengthened my ability to reason about systems, feasibility, and product tradeoffs. Reinforced how technical decisions directly impact UX and operational complexity.",
                 skills: [
@@ -126,7 +126,7 @@ export default function Projects() {
                 context:
                     "I wanted to test common trading strategies on real market data and understand where their assumptions break down. I built an analysis pipeline that emphasizes transparency and interpretability over black-box prediction.",
                 role:
-                    "I designed and implemented the analysis independently—data ingestion, processing, strategy logic, and visualization.",
+                    "I designed and implemented the analysis independently: data ingestion, processing, strategy logic, and visualization.",
                 problemFraming:
                     "The goal wasn’t “predict perfectly.” It was evaluating how simple strategies behave across time horizons and being honest about variability and limitations.",
                 approach: [
@@ -137,7 +137,7 @@ export default function Projects() {
                     "Documented failure modes where strategies did not generalize",
                 ],
                 solution:
-                    "Created an app workflow where users upload data and see how strategies behave under different conditions. Visual outputs highlight volatility, patterns, and inconsistencies—insight-first, not hype-first.",
+                    "Created an app workflow where users upload data and see how strategies behave under different conditions. Visual outputs highlight volatility, patterns, and inconsistencies. Insight-first, not hype-first.",
                 outcome:
                     "Reinforced interpretability and skepticism in analysis. Improved my ability to communicate insights clearly and reason about model limits, not just results.",
                 skills: [
@@ -151,6 +151,115 @@ export default function Projects() {
                 artifacts: [
                     { label: "View GitHub Repository →", href: "https://github.com/Kunal1337/Moving-Averages-Stock-Trading" },
                     { label: "View Sample Outputs →", href: "https://drive.google.com/drive/folders/1QNcIVXfUNcKP4B67HFMrhsr9whHA7Y9a?usp=sharing" },
+                ],
+            },
+            {
+                id: "nba-props",
+                title: "Building an NBA Player Props Analytics Platform",
+                subtitle:
+                    "Aggregated live NBA player prop lines and historical performance to surface high-probability betting opportunities.",
+                contextLine: "Personal Project · Full-Stack + Data · Live odds analysis",
+                context:
+                    "Sportsbook prop lines and a player's actual performance trends live in separate places, so bettors are left doing the comparison manually. I built a full-stack application that aggregates NBA player prop lines and analyzes performance trends to identify high-probability opportunities, synthesizing real-time market data with historical performance into a streamlined, data-driven decision tool.",
+                role:
+                    "I independently designed and built the platform end-to-end: backend data pipeline, odds/stats integration, analysis logic, and frontend dashboard.",
+                problemFraming:
+                    "The goal wasn't picking winners. It was turning scattered inputs, live sportsbook odds and a player's recent game logs, into one comparable number: how often has this player actually cleared this line recently.",
+                approach: [
+                    "Built a Node/Express backend that pulls live player-prop odds (points, assists, rebounds, threes) from The Odds API across DraftKings, FanDuel, and BetMGM",
+                    "Pulled player game logs and schedule data from the NBA's public stats CDN, with BallDontLie as a fallback for player-to-team resolution",
+                    "Calculated hit rates for each prop line over the last 5, 10, and 20 games, the full season, and head-to-head vs. the upcoming opponent",
+                    "Layered in opponent defensive matchup ratings by position to flag favorable or unfavorable spots",
+                    "Added caching and concurrency limits to stay within third-party API rate limits, with Socket.io for live updates on the frontend",
+                ],
+                solution:
+                    "Delivered a React dashboard where users filter props by stat type and minimum hit rate, browse a 'Top Locks' list of the highest-hit-rate lines, spot 'Trending' players whose recent form diverges from their season baseline, and drill into a player's full performance history in a detail view.",
+                outcome:
+                    "Strengthened my ability to build real-time, multi-source data pipelines around undocumented and rate-limited APIs, and to turn raw stats into a single, decision-ready signal.",
+                skills: [
+                    "Node.js",
+                    "Express",
+                    "React",
+                    "Socket.io",
+                    "REST API Integration",
+                    "Data Caching",
+                    "Statistical Analysis",
+                    "Full-Stack Development",
+                ],
+                artifacts: [
+                    { label: "View Live Demo →", href: "https://nba-props-1.onrender.com/" },
+                    { label: "View GitHub Repository →", href: "https://github.com/Kunal1337/NBA-Props" },
+                ],
+            },
+            {
+                id: "cloudflare-feedback",
+                title: "Prototyping an AI Feedback Aggregator on Cloudflare's Developer Platform",
+                subtitle:
+                    "Built and deployed a full-stack feedback-analysis tool for a Cloudflare Product Manager Intern take-home challenge.",
+                contextLine: "Cloudflare PM Intern Assignment · Product + Builder · Deployed on Workers",
+                context:
+                    "The assignment: product feedback arrives scattered across support tickets, GitHub issues, Discord, and more, making it hard to extract themes, urgency, and sentiment. The challenge was to prototype a tool that aggregates and analyzes that feedback, time-boxed to a few hours, while using the exercise to also evaluate Cloudflare's own developer platform as a first-time user.",
+                role:
+                    "I acted as both product owner and builder: scoped the solution, built and deployed it on Cloudflare's platform, and wrote up the architecture and product feedback the assignment asked for.",
+                problemFraming:
+                    "With a hard time-box, the risk was over-scoping. I chose depth over breadth: a small set of feedback sources analyzed well, rather than a wide integration surface built shallowly.",
+                approach: [
+                    "Scoped a lightweight feedback-aggregation dashboard instead of trying to cover every possible channel",
+                    "Built a Cloudflare Worker backend using Workers AI to analyze feedback per source and D1 to store structured results",
+                    "Seeded mock feedback across sources (GitHub, Discord, and more), since real third-party integration wasn't required",
+                    "Built a React and TypeScript frontend to seed data, trigger per-source AI analysis, and generate a synthesized cross-source report",
+                    "Kept a running friction log of onboarding, documentation, and UI/UX issues hit while building on the platform, each paired with a suggested product fix",
+                ],
+                solution:
+                    "A Worker-hosted API (seed, per-source analysis, global synthesis) backed by D1, paired with a dashboard that lets a PM seed mock feedback, run AI analysis per source, and pull a global summary across all sources.",
+                outcome:
+                    "Delivered a working prototype within the time-box, plus a concrete set of UX friction points and suggested fixes, the core deliverable the assignment was actually evaluating.",
+                skills: [
+                    "Cloudflare Workers",
+                    "Workers AI",
+                    "D1 (SQL)",
+                    "React",
+                    "TypeScript",
+                    "Product Thinking",
+                    "Rapid Prototyping",
+                ],
+                artifacts: [
+                    { label: "View GitHub Repository →", href: "https://github.com/Kunal1337/cloudflare-fb-dashboard/tree/main/dashboard-ui" },
+                ],
+            },
+            {
+                id: "steam-scraper",
+                title: "Community Engagement Monitor for Steam Discussion Boards",
+                subtitle:
+                    "A rate-limited scraper and dashboard tracking unanswered threads and community activity across EA's Steam discussion boards.",
+                contextLine: "Personal Project · Independent Build · Deployed on Streamlit",
+                context:
+                    "Large game discussion boards generate more threads than a community team can manually track, so posts that need a response can sit unanswered indefinitely. I built a scraper and monitoring dashboard focused on EA's game discussion boards on Steam to surface which threads actually need attention.",
+                role:
+                    "I independently built the full pipeline: the scraper, the scheduled data collection, and the Streamlit dashboard.",
+                approach: [
+                    "Built a polite, rate-limited scraper with a hard 2-second delay between requests and a capped scope per run",
+                    "Added exponential backoff for 429 and 5xx responses, plus a circuit breaker that halts the run after repeated throttling failures",
+                    "Automated recurring runs via GitHub Actions",
+                    "Tracked unanswered threads, post-to-reply ratios, and EA-vs-player posting activity against a maintained list of known official accounts",
+                    "Added language detection with a minimum-character threshold, so short or ambiguous text is left 'Unknown' instead of guessed",
+                ],
+                solution:
+                    "A Streamlit dashboard that separates volume from urgency: compare games side by side, drill into one, and surface the threads that are aging or unanswered without reading every post.",
+                outcome:
+                    "Reinforced responsible-scraping practices under rate limits, working around fragile and undocumented HTML structure, and being explicit about the limits of automated detection rather than guessing.",
+                skills: [
+                    "Python",
+                    "Web Scraping",
+                    "Streamlit",
+                    "Data Pipelines",
+                    "GitHub Actions",
+                    "Rate-Limit Handling",
+                    "Language Detection",
+                ],
+                artifacts: [
+                    { label: "View Live Dashboard →", href: "https://ea-games-on-steam.streamlit.app/" },
+                    { label: "View GitHub Repository →", href: "https://github.com/Kunal1337/steam_discussions_scraper" },
                 ],
             },
         ],
